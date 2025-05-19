@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kios Kusna - Kasir</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Kios Kusna</h1>
+    <p></p>
+  </header>
+
+  <main>
+    <section class="nota">
+      <h2>Nota Sementara</h2>
+      <form id="form-barang">
+        <input type="text" id="nama-barang" placeholder="Nama Barang" required>
+        <input type="number" id="harga-barang" placeholder="Harga" required>
+        <button type="submit">Tambah</button>
+      </form>
+
+      <ul id="daftar-nota"></ul>
+      <div class="total">
+        Total: Rp <span id="total-harga">0</span>
+      </div>
+      <button id="simpan-utang">Catat sebagai Utang</button>
+      <button id="cetak-nota">Cetak Nota</button>
+    </section>
+
+    <section class="utang">
+      <h2>Daftar Utang</h2>
+      <input type="text" id="cari-utang" placeholder="Cari utang...">
+      <ul id="daftar-utang"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Sakti Pratama</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

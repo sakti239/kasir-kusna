@@ -1,0 +1,162 @@
+/* style.css */
+
+:root {
+  --primary-color: #0d9488;
+  --secondary-color: #f0fdfa;
+  --accent-color: #10b981;
+  --danger-color: #ef4444;
+  --text-color: #1f2937;
+  --bg-color: #ffffff;
+  --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: var(--secondary-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+section {
+  background: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+input[type="text"], input[type="number"] {
+  padding: 0.5rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 0.5rem;
+  flex: 1;
+  min-width: 120px;
+}
+
+button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+  background: var(--accent-color);
+  transform: scale(1.05);
+}
+
+button#simpan-utang {
+  background-color: #fbbf24;
+  margin-top: 1rem;
+}
+
+button#cetak-nota {
+  background-color: #3b82f6;
+  margin-left: 0.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.total {
+  margin-top: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#cari-utang {
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid var(--primary-color);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media print {
+  header, footer, button, input, form, #cari-utang {
+    display: none;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  section {
+    box-shadow: none;
+    padding: 0;
+  }
+}
